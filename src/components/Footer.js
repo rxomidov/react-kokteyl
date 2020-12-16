@@ -6,11 +6,11 @@ export default function Footer(props) {
     return <FooterWrapper>
         <div className="container py-3">
             <div className="row">
-                <div className="col-md-6 text-uppercase text-center">
+                <div className="col-md-6 tt">
                     copyright &copy; cocktail db {new Date().getFullYear()}.
                     all rights reserved by RX{" "}
                 </div>
-                <div className="col-md-6 d-flex justify-content-around mb-3">
+                <div className="col-md-6 d-flex">
                     {socialData.map(item =>
                         <a href={item.url} key={item.id}>
                             {item.icon}
@@ -34,4 +34,16 @@ const FooterWrapper = styled.footer`
   color: #7effb8;
   cursor:pointer;
   }
+  .row{
+  padding: 1.5rem;
+  }
+.d-flex {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+.tt{
+text-transform:uppercase;
+text-align: center;
+margin-bottom: .5rem;
+}
 `
